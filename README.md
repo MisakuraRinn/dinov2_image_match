@@ -1,42 +1,42 @@
-# ? README.md
+# ðŸ“Œ README.md
 
-## »ùÓÚ DINOv2 µÄÍ¼ÏñÏàËÆ¶È¼ìË÷ÏµÍ³£¨Project 5£©
+## åŸºäºŽ DINOv2 çš„å›¾åƒç›¸ä¼¼åº¦æ£€ç´¢ç³»ç»Ÿï¼ˆProject 5ï¼‰
 
-±¾ÏîÄ¿ÊµÏÖÁËÒ»¸ö **»ùÓÚ DINOv2 Vision Transformer µÄÍ¼ÏñÏàËÆ¶È¼ìË÷ÏµÍ³**£¬
-º­¸Ç **Êý¾ÝÏÂÔØ ¡ú ÌØÕ÷ÌáÈ¡ ¡ú ÌØÕ÷¿â¹¹½¨ ¡ú Top-K ÏàËÆ¶È¼ìË÷ ¡ú Django Web Õ¹Ê¾** µÄÍêÕûÁ÷³Ì¡£
+æœ¬é¡¹ç›®å®žçŽ°äº†ä¸€ä¸ª **åŸºäºŽ DINOv2 Vision Transformer çš„å›¾åƒç›¸ä¼¼åº¦æ£€ç´¢ç³»ç»Ÿ**ï¼Œ
+æ¶µç›– **æ•°æ®ä¸‹è½½ â†’ ç‰¹å¾æå– â†’ ç‰¹å¾åº“æž„å»º â†’ Top-K ç›¸ä¼¼åº¦æ£€ç´¢ â†’ Django Web å±•ç¤º** çš„å®Œæ•´æµç¨‹ã€‚
 
-ÏîÄ¿Í¬Ê±Ìá¹© **ÃüÁîÐÐ¼ìË÷** Óë **Web ¼ìË÷ÏµÍ³**£¬ÊÊÓÃÓÚ¿Î³ÌÊµÑéÓë½ÌÑ§ÑéÖ¤¡£
+é¡¹ç›®åŒæ—¶æä¾› **å‘½ä»¤è¡Œæ£€ç´¢** ä¸Ž **Web æ£€ç´¢ç³»ç»Ÿ**ï¼Œé€‚ç”¨äºŽè¯¾ç¨‹å®žéªŒä¸Žæ•™å­¦éªŒè¯ã€‚
 
 ---
 
-## ? ÏîÄ¿½á¹¹ËµÃ÷
+## ðŸ“ é¡¹ç›®ç»“æž„è¯´æ˜Ž
 
 ```text
 assignments/
-©À©¤ download_images.py              # ÅúÁ¿ÏÂÔØÍ¼Æ¬
-©À©¤ preprocess_image.py             # Í¼ÏñÔ¤´¦Àí
-©À©¤ dinov2_numpy.py                 # DINOv2 / ViT NumPy ÍÆÀíÊµÏÖ
-©À©¤ extract_feats_from_done_jsonl.py# ÌØÕ÷ÌáÈ¡½Å±¾
-©À©¤ build_feature_bank_npz.py       # ¹¹½¨ÌØÕ÷¿â
-©À©¤ search_topk_to_jsonl.py         # ÃüÁîÐÐ Top-K ¼ìË÷
-©À©¤ feature_bank.npz                # Í¼ÏñÌØÕ÷¿â
-©À©¤ vit-dinov2-base.npz             # DINOv2 È¨ÖØ
-©À©¤ demo_data/                      # Ê¾ÀýÍ¼Æ¬ÓëÌØÕ÷
-©À©¤ images/                         # ÏÂÔØµÄÔ­Ê¼Í¼Æ¬
-©À©¤ features_dinov2/                # µ¥Í¼ÌØÕ÷ÓëË÷ÒýÎÄ¼þ
-©¸©¤ django_app/
-   ©À©¤ manage.py
-   ©À©¤ retrieval/                   # ¼ìË÷Âß¼­ÓëÄ£ÐÍ
-   ©À©¤ templates/                   # Ç°¶ËÒ³Ãæ
-   ©¸©¤ static/                      # CSS / JS / ¶¯Ð§
+â”œâ”€ download_images.py              # æ‰¹é‡ä¸‹è½½å›¾ç‰‡
+â”œâ”€ preprocess_image.py             # å›¾åƒé¢„å¤„ç†
+â”œâ”€ dinov2_numpy.py                 # DINOv2 / ViT NumPy æŽ¨ç†å®žçŽ°
+â”œâ”€ extract_feats_from_done_jsonl.py# ç‰¹å¾æå–è„šæœ¬
+â”œâ”€ build_feature_bank_npz.py       # æž„å»ºç‰¹å¾åº“
+â”œâ”€ search_topk_to_jsonl.py         # å‘½ä»¤è¡Œ Top-K æ£€ç´¢
+â”œâ”€ feature_bank.npz                # å›¾åƒç‰¹å¾åº“
+â”œâ”€ vit-dinov2-base.npz             # DINOv2 æƒé‡
+â”œâ”€ demo_data/                      # ç¤ºä¾‹å›¾ç‰‡ä¸Žç‰¹å¾
+â”œâ”€ images/                         # ä¸‹è½½çš„åŽŸå§‹å›¾ç‰‡
+â”œâ”€ features_dinov2/                # å•å›¾ç‰¹å¾ä¸Žç´¢å¼•æ–‡ä»¶
+â””â”€ django_app/
+   â”œâ”€ manage.py
+   â”œâ”€ retrieval/                   # æ£€ç´¢é€»è¾‘ä¸Žæ¨¡åž‹
+   â”œâ”€ templates/                   # å‰ç«¯é¡µé¢
+   â””â”€ static/                      # CSS / JS / åŠ¨æ•ˆ
 ```
 
 ---
 
-## ? »·¾³ÒÀÀµ
+## ðŸ”§ çŽ¯å¢ƒä¾èµ–
 
 * Python 3.8+
-* Ö÷ÒªÒÀÀµ¿â£º
+* ä¸»è¦ä¾èµ–åº“ï¼š
 
   ```text
   numpy
@@ -47,100 +47,100 @@ assignments/
   django
   ```
 
-°²×°·½Ê½£¨Ê¾Àý£©£º
+å®‰è£…æ–¹å¼ï¼ˆç¤ºä¾‹ï¼‰ï¼š
 
 ```bash
 pip install numpy pillow scipy tqdm requests django
 ```
 
-> ?? ±¾ÏîÄ¿Î´Ìá¹© `requirements.txt`£¬Çë¸ù¾ÝÐèÒª×ÔÐÐ°²×°ÒÀÀµ¡£
+> âš ï¸ æœ¬é¡¹ç›®æœªæä¾› `requirements.txt`ï¼Œè¯·æ ¹æ®éœ€è¦è‡ªè¡Œå®‰è£…ä¾èµ–ã€‚
 
 ---
 
-## ? Êý¾ÝÏÂÔØ
+## ðŸ“¥ æ•°æ®ä¸‹è½½
 
-Ô­Ê¼Í¼ÏñÏÂÔØÁ´½Ó´æ´¢ÓÚ `data.csv` ÎÄ¼þÖÐ¡£
+åŽŸå§‹å›¾åƒä¸‹è½½é“¾æŽ¥å­˜å‚¨äºŽ `data.csv` æ–‡ä»¶ä¸­ã€‚
 
-ÔËÐÐÒÔÏÂÃüÁîÅúÁ¿ÏÂÔØÍ¼Æ¬£º
+è¿è¡Œä»¥ä¸‹å‘½ä»¤æ‰¹é‡ä¸‹è½½å›¾ç‰‡ï¼š
 
 ```bash
 python download_images.py
 ```
 
-* ÏÂÔØºóµÄÍ¼Æ¬½«±£´æÔÚ `images/` Ä¿Â¼
-* ½Å±¾Ö§³Ö¶ÏµãÐø´«ÓëÏÂÔØÈÕÖ¾
-* ÏÂÔØ×´Ì¬»áÐ´Èë¶ÔÓ¦µÄ jsonl ÎÄ¼þ£¬¹©ºóÐø´¦ÀíÊ¹ÓÃ
+* ä¸‹è½½åŽçš„å›¾ç‰‡å°†ä¿å­˜åœ¨ `images/` ç›®å½•
+* è„šæœ¬æ”¯æŒæ–­ç‚¹ç»­ä¼ ä¸Žä¸‹è½½æ—¥å¿—
+* ä¸‹è½½çŠ¶æ€ä¼šå†™å…¥å¯¹åº”çš„ jsonl æ–‡ä»¶ï¼Œä¾›åŽç»­å¤„ç†ä½¿ç”¨
 
 ---
 
-## ? ÌØÕ÷ÌáÈ¡ÓëÌØÕ÷¿â¹¹½¨
+## ðŸ§  ç‰¹å¾æå–ä¸Žç‰¹å¾åº“æž„å»º
 
-### 1?? ÌáÈ¡Í¼ÏñÌØÕ÷
+### 1ï¸âƒ£ æå–å›¾åƒç‰¹å¾
 
-¶ÔÒÑÏÂÔØÍê³ÉµÄÍ¼Æ¬£¬Ê¹ÓÃ DINOv2 ÌáÈ¡ÌØÕ÷£º
+å¯¹å·²ä¸‹è½½å®Œæˆçš„å›¾ç‰‡ï¼Œä½¿ç”¨ DINOv2 æå–ç‰¹å¾ï¼š
 
 ```bash
 python extract_feats_from_done_jsonl.py
 ```
 
-* Ã¿ÕÅÍ¼Æ¬Éú³ÉÒ»¸ö `*.npy` ÌØÕ÷ÎÄ¼þ£¨768 Î¬£©
-* Í¬Ê±Éú³É `features_index.jsonl` Ë÷ÒýÎÄ¼þ
+* æ¯å¼ å›¾ç‰‡ç”Ÿæˆä¸€ä¸ª `*.npy` ç‰¹å¾æ–‡ä»¶ï¼ˆ768 ç»´ï¼‰
+* åŒæ—¶ç”Ÿæˆ `features_index.jsonl` ç´¢å¼•æ–‡ä»¶
 
 ---
 
-### 2?? ¹¹½¨ÌØÕ÷¿â
+### 2ï¸âƒ£ æž„å»ºç‰¹å¾åº“
 
-½«·ÖÉ¢µÄÌØÕ÷¾ÛºÏÎªÍ³Ò»ÌØÕ÷¿â£º
+å°†åˆ†æ•£çš„ç‰¹å¾èšåˆä¸ºç»Ÿä¸€ç‰¹å¾åº“ï¼š
 
 ```bash
 python build_feature_bank_npz.py
 ```
 
-Éú³ÉÎÄ¼þ£º
+ç”Ÿæˆæ–‡ä»¶ï¼š
 
 ```text
 feature_bank.npz
 ```
 
-ÄÚÈÝ°üÀ¨£º
+å†…å®¹åŒ…æ‹¬ï¼š
 
-* ¹éÒ»»¯ºóµÄÌØÕ÷¾ØÕó£¨N ¡Á 768£©
-* Í¼Æ¬Â·¾¶¡¢Ë÷ÒýµÈÔªÐÅÏ¢
+* å½’ä¸€åŒ–åŽçš„ç‰¹å¾çŸ©é˜µï¼ˆN Ã— 768ï¼‰
+* å›¾ç‰‡è·¯å¾„ã€ç´¢å¼•ç­‰å…ƒä¿¡æ¯
 
 ---
 
-## ? ÃüÁîÐÐ Top-K ¼ìË÷
+## ðŸ” å‘½ä»¤è¡Œ Top-K æ£€ç´¢
 
-¿ÉÍ¨¹ýÃüÁîÐÐ·½Ê½½øÐÐÍ¼ÏñÏàËÆ¶È¼ìË÷£º
+å¯é€šè¿‡å‘½ä»¤è¡Œæ–¹å¼è¿›è¡Œå›¾åƒç›¸ä¼¼åº¦æ£€ç´¢ï¼š
 
 ```bash
 python search_topk_to_jsonl.py
 ```
 
-¹¦ÄÜ£º
+åŠŸèƒ½ï¼š
 
-* ¼ÆËã²éÑ¯Í¼ÏñÌØÕ÷
-* ÓëÌØÕ÷¿â½øÐÐÓàÏÒÏàËÆ¶ÈÆ¥Åä
-* Êä³ö Top-K ÏàËÆ½á¹û£¨jsonl ¸ñÊ½£©
+* è®¡ç®—æŸ¥è¯¢å›¾åƒç‰¹å¾
+* ä¸Žç‰¹å¾åº“è¿›è¡Œä½™å¼¦ç›¸ä¼¼åº¦åŒ¹é…
+* è¾“å‡º Top-K ç›¸ä¼¼ç»“æžœï¼ˆjsonl æ ¼å¼ï¼‰
 
 ---
 
-## ? Django Web ÏµÍ³ÔËÐÐ
+## ðŸŒ Django Web ç³»ç»Ÿè¿è¡Œ
 
-### 1?? Êý¾Ý¿âÇ¨ÒÆ
+### 1ï¸âƒ£ æ•°æ®åº“è¿ç§»
 
 ```bash
 cd django_app
 python manage.py migrate
 ```
 
-### 2?? Æô¶¯·þÎñÆ÷
+### 2ï¸âƒ£ å¯åŠ¨æœåŠ¡å™¨
 
 ```bash
 python manage.py runserver
 ```
 
-### 3?? ä¯ÀÀÆ÷·ÃÎÊ
+### 3ï¸âƒ£ æµè§ˆå™¨è®¿é—®
 
 ```text
 http://127.0.0.1:8000/
@@ -148,41 +148,41 @@ http://127.0.0.1:8000/
 
 ---
 
-## ? Web ÏµÍ³¹¦ÄÜ
+## ðŸ§© Web ç³»ç»ŸåŠŸèƒ½
 
-* ? ÓÃ»§×¢²á / µÇÂ¼ / ÍË³ö
-* ? Í¼Æ¬ÉÏ´«ÓëÔÚÏßÏàËÆ¶È¼ìË÷
-* ? Top-K ¼ìË÷½á¹û¿ÉÊÓ»¯
-* ? ÓÃ»§¼ìË÷ÀúÊ·¼ÇÂ¼¹ÜÀí
-* ? ¶¯Ì¬Ç°¶Ë±³¾°Óë½»»¥ÌØÐ§
+* âœ… ç”¨æˆ·æ³¨å†Œ / ç™»å½• / é€€å‡º
+* âœ… å›¾ç‰‡ä¸Šä¼ ä¸Žåœ¨çº¿ç›¸ä¼¼åº¦æ£€ç´¢
+* âœ… Top-K æ£€ç´¢ç»“æžœå¯è§†åŒ–
+* âœ… ç”¨æˆ·æ£€ç´¢åŽ†å²è®°å½•ç®¡ç†
+* âœ… åŠ¨æ€å‰ç«¯èƒŒæ™¯ä¸Žäº¤äº’ç‰¹æ•ˆ
 
 ---
 
-## ? ºËÐÄÊµÏÖËµÃ÷
+## ðŸ“Œ æ ¸å¿ƒå®žçŽ°è¯´æ˜Ž
 
-* **DINOv2 ÍÆÀí**£º
-  Ê¹ÓÃ NumPy ÊµÏÖ Vision Transformer Ç°Ïò´«²¥£¬²»ÒÀÀµ PyTorch
+* **DINOv2 æŽ¨ç†**ï¼š
+  ä½¿ç”¨ NumPy å®žçŽ° Vision Transformer å‰å‘ä¼ æ’­ï¼Œä¸ä¾èµ– PyTorch
 
-* **ÏàËÆ¶È¼ÆËã**£º
-  Ê¹ÓÃ±ê×¼ÓàÏÒÏàËÆ¶È£º
+* **ç›¸ä¼¼åº¦è®¡ç®—**ï¼š
+  ä½¿ç”¨æ ‡å‡†ä½™å¼¦ç›¸ä¼¼åº¦ï¼š
   [
   \text{sim}(x,y)=\frac{x^\top y}{|x||y|}
   ]
 
-* **Web ¼ìË÷Âß¼­**£º
-  ·â×°ÓÚ `retrieval/retriever.py`£¬Í³Ò»¼ÓÔØÌØÕ÷¿â²¢Ö´ÐÐËÑË÷
+* **Web æ£€ç´¢é€»è¾‘**ï¼š
+  å°è£…äºŽ `retrieval/retriever.py`ï¼Œç»Ÿä¸€åŠ è½½ç‰¹å¾åº“å¹¶æ‰§è¡Œæœç´¢
 
 ---
 
-## ?? ×¢ÒâÊÂÏî
+## âš ï¸ æ³¨æ„äº‹é¡¹
 
-* È·±£ `vit-dinov2-base.npz` Óë `feature_bank.npz` Â·¾¶ÕýÈ·
-* NumPy ÍÆÀíËÙ¶È½ÏÂý£¬ÊÊºÏÊµÑéÓë½ÌÑ§£¬²»ÊÊºÏ´ó¹æÄ£ÔÚÏß²¿Êð
-* ÈôÊý¾ÝÁ¿½Ï´ó£¬½¨ÒéÏÞÖÆ Top-K »òÊ¹ÓÃ×Ó¼¯²âÊÔ
+* ç¡®ä¿ `vit-dinov2-base.npz` ä¸Ž `feature_bank.npz` è·¯å¾„æ­£ç¡®
+* NumPy æŽ¨ç†é€Ÿåº¦è¾ƒæ…¢ï¼Œé€‚åˆå®žéªŒä¸Žæ•™å­¦ï¼Œä¸é€‚åˆå¤§è§„æ¨¡åœ¨çº¿éƒ¨ç½²
+* è‹¥æ•°æ®é‡è¾ƒå¤§ï¼Œå»ºè®®é™åˆ¶ Top-K æˆ–ä½¿ç”¨å­é›†æµ‹è¯•
 
 ---
 
-## ? ÏîÄ¿ËµÃ÷
+## ðŸ“„ é¡¹ç›®è¯´æ˜Ž
 
-* ±¾ÏîÄ¿Îª¿Î³Ì **Project 5** ÊµÑé×÷Òµ
-* Ö÷ÒªÓÃÓÚÕ¹Ê¾ **ÊÓ¾õÌØÕ÷ÌáÈ¡ + ÏàËÆ¶È¼ìË÷ + Web ÏµÍ³¼¯³É** µÄÍêÕûÁ÷³Ì
+* æœ¬é¡¹ç›®ä¸ºè¯¾ç¨‹ **Project 5** å®žéªŒä½œä¸š
+* ä¸»è¦ç”¨äºŽå±•ç¤º **è§†è§‰ç‰¹å¾æå– + ç›¸ä¼¼åº¦æ£€ç´¢ + Web ç³»ç»Ÿé›†æˆ** çš„å®Œæ•´æµç¨‹
