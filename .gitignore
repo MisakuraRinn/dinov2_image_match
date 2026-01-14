@@ -1,0 +1,4 @@
+images/
+features_dinov2/
+vit-dinov2-base.npz
+data.csv

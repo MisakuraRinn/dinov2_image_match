@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/retrieval/styles.css" />
+</head>
+<body data-effect="aurora">
+  <div class="bg-grid"></div>
+  <div class="bg-aurora"></div>
+  <div class="bg-dots"></div>
+  <canvas class="fx-canvas" id="fx-canvas"></canvas>
+  <div class="page">
+    <nav class="nav">
+      <a class="logo" href="/">VisualSearch</a>
+      <div class="nav-links">
+        <a href="/search/">Search</a>
+        <a href="/history/">History</a>
+      </div>
+      <div class="nav-auth">
+        {% if user.is_authenticated %}
+        <span class="user">{{ user.username }}</span>
+        <a class="btn ghost" href="/logout/">Logout</a>
+        {% else %}
+        <a class="btn ghost" href="/login/">Login</a>
+        <a class="btn" href="/register/">Register</a>
+        {% endif %}
+      </div>
+    </nav>
+
+    <header class="hero home-hero">
+      <div class="badge">Visual Search</div>
+      <h1>Find similar images with a single upload.</h1>
+      <p>Powered by DINOv2 feature embeddings and fast cosine similarity search across your local gallery.</p>
+      <div class="cta-row">
+        <a class="btn" href="/search/">Start searching</a>
+        <a class="btn ghost" href="/register/">Create account</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-title">Upload & Match</div>
+          <p>Drop any image and receive the closest visual neighbors within seconds.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Top-K Control</div>
+          <p>Choose how many results to return, from quick peeks to deep dives.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Personal History</div>
+          <p>Keep a private log of your past searches and revisit the best matches.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="fx-panel" id="fx-panel">
+    <div class="fx-title">Background FX</div>
+    <label class="fx-row">
+      <span>Animation</span>
+      <input id="fx-toggle" type="checkbox" checked />
+    </label>
+    <label class="fx-row">
+      <span>Effect</span>
+      <select id="fx-select">
+        <option value="none">None</option>
+        <option value="aurora">Aurora</option>
+        <option value="grid">Grid</option>
+        <option value="stars">Stars</option>
+        <option value="particles">Particles</option>
+        <option value="boids">Boids</option>
+        <option value="sakura">Sakura</option>
+      </select>
+    </label>
+  </div>
+  <button class="fx-fab" id="fx-fab" type="button">FX</button>
+  <script src="/static/retrieval/app.js"></script>
+</body>
+</html>

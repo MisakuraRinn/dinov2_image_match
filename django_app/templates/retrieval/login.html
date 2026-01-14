@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/retrieval/styles.css" />
+</head>
+<body data-effect="aurora">
+  <div class="bg-grid"></div>
+  <div class="bg-aurora"></div>
+  <div class="bg-dots"></div>
+  <canvas class="fx-canvas" id="fx-canvas"></canvas>
+  <div class="page">
+    <nav class="nav">
+      <a class="logo" href="/">VisualSearch</a>
+      <div class="nav-links">
+        <a href="/search/">Search</a>
+        <a href="/history/">History</a>
+      </div>
+      <div class="nav-auth">
+        <a class="btn ghost" href="/login/">Login</a>
+        <a class="btn" href="/register/">Register</a>
+      </div>
+    </nav>
+
+    <section class="panel auth-panel">
+      <h1>Welcome back</h1>
+      <p>Login to access your saved search history.</p>
+
+      {% if form.errors %}
+      <div class="alert">Invalid username or password.</div>
+      {% endif %}
+
+      <form class="form auth-form" method="post" action="/login/">
+        {% csrf_token %}
+        <label class="field">
+          <span>Username</span>
+          {{ form.username }}
+        </label>
+        <label class="field">
+          <span>Password</span>
+          {{ form.password }}
+        </label>
+        <button class="btn" type="submit">Login</button>
+      </form>
+    </section>
+  </div>
+  <div class="fx-panel" id="fx-panel">
+    <div class="fx-title">Background FX</div>
+    <label class="fx-row">
+      <span>Animation</span>
+      <input id="fx-toggle" type="checkbox" checked />
+    </label>
+    <label class="fx-row">
+      <span>Effect</span>
+      <select id="fx-select">
+        <option value="none">None</option>
+        <option value="aurora">Aurora</option>
+        <option value="grid">Grid</option>
+        <option value="stars">Stars</option>
+        <option value="particles">Particles</option>
+        <option value="boids">Boids</option>
+        <option value="sakura">Sakura</option>
+      </select>
+    </label>
+  </div>
+  <button class="fx-fab" id="fx-fab" type="button">FX</button>
+  <script src="/static/retrieval/app.js"></script>
+</body>
+</html>
